@@ -9,5 +9,12 @@ class TestSimpleCalculator(unittest.TestCase):
         with self.assertRaises(TypeError):
             calculator.add(2,3,4)
 
+    def test_subtract(self):
+        calculator = SimpleCalculator()
+        self.assertEqual(calculator.subtract(5,2), 3)
+        self.assertEqual(calculator.subtract(2,5), -3)
+        with self.assertRaises(TypeError):
+            calculator.subtract(2,3,4)
+
 if __name__ == '__main__':
     unittest.main()
